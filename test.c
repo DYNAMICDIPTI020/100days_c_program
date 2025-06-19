@@ -1,16 +1,21 @@
-#include"stdio.h"
+#include <stdio.h>
 
-void sum()
-{
-    int a ,b , sum = 0;
-    printf("enter the value of a and b\n");
-    scanf("%d%d",&a,&b);
-    sum = a + b;
-    printf("sum of a and b is %d\n",sum);
-}
-void main()
-{
-    sum();
-    printf("hello world\n");    
-    sum();
+int main() {
+    int n, i = 0, num;
+
+    // Prompt user for the number of integers they will enter
+    printf("How many numbers will you enter? ");
+    scanf("%d", &n);
+
+    printf("Enter %d numbers:\n", n);
+    while (i < n) {
+        scanf("%d", &num);
+        // Check if the number is even
+        if (num % 2 == 0) {
+            printf("%d is even.\n", num);
+        }
+        i++;
+    }
+
+    return 0;
 }
